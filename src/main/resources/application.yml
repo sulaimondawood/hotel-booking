@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: hotelbooking
+  datasource:
+    username: postgres
+    password: admin
+    url: jdbc:postgresql://localhost:5432/hotel-booking
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.PostgreSQLDialect
+          show-sql: true
+          format-sql: true
+
