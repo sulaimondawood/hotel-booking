@@ -15,3 +15,8 @@ spring:
           show-sql: true
           format-sql: true
 
+
+cloudinary:
+  secret-key: Bs660D1JW5CCEFU9oiOtGS6x6tQ
+  api-key: 526353997268917
+  cloud-name: dbu0whbs4
