@@ -99,6 +99,7 @@ public class BookingService implements IBookingService {
 
     try {
       Booking booking = bookingRepository.findById(bookingId).orElseThrow(()->new BookingException("Booking not found"));
+      bookingRepository.deleteById(bookingId);
       BookingDTO bookingDTO = Utils.mapBookingEntityToBookingDTO(booking);
 
       response.setStatusCode(200);

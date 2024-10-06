@@ -23,14 +23,14 @@ public class UserController {
     return ResponseEntity.status(response.getStatusCode()).body(response);
   }
 
-  @GetMapping("/${id}")
+  @GetMapping("/{id}")
   public ResponseEntity<Response> getUser(@PathVariable("id") String id) {
     Response response = userService.getUserById(id);
     return ResponseEntity.status(response.getStatusCode())
         .body(response);
   }
 
-  @DeleteMapping("/${id}")
+  @DeleteMapping("/{id}")
   public ResponseEntity<Response> deleteUser(@PathVariable("id") String id) {
     Response response = userService.deleteUser(id);
     return ResponseEntity.status(response.getStatusCode())
@@ -45,7 +45,7 @@ public class UserController {
     return ResponseEntity.status(response.getStatusCode()).body(response);
   }
 
-  @GetMapping("/${id}/bookings")
+  @GetMapping("/{id}/bookings")
   public ResponseEntity<Response> getUserBookings(@PathVariable String id){
     Response response = userService.getUserBookingHistory(id);
     return ResponseEntity.status(response.getStatusCode()).body(response);

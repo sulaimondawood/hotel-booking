@@ -118,7 +118,7 @@ public class RoomService implements IRoomService {
     try {
       String photoUrl = null;
 
-      if(roomPhoto != null || !roomPhoto.isEmpty()){
+      if(roomPhoto != null){
          photoUrl = cloudinaryService.uploadFile(roomPhoto, roomPhoto.getOriginalFilename());
       }
 
